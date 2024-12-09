@@ -371,7 +371,7 @@ def main() -> None:
         st.session_state["file_uploader_key"] = 0
 
     model_config = config["models"][st.session_state["model_name"]]
-    image_upload_disabled = model_config.get("image_upload_disabled", False)
+    image_upload_disabled = True if model_config.get("input_format") == "text" else False
     uploaded_files = st.file_uploader(
         "Choose a file",
         type=["jpg", "jpeg", "png", "txt", "pdf", "csv", "py"],

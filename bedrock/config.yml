@@ -53,4 +53,3 @@ models:
     max_tokens: 4096
     memory_window: 10
     max_top_k: 200
-    image_upload_disabled: true
