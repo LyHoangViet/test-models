@@ -17,33 +17,33 @@ models:
     max_tokens: 4096
     memory_window: 10
     max_top_k: 500
-  Claude 3.5 Sonnet:
-    model_id: "anthropic.claude-3-5-sonnet-20240620-v1:0"
+  Amazon Nova Pro:
+    model_id: "us.amazon.nova-pro-v1:0"
     input_format: "text"
     temperature: 1.0
     top_p: 1.0
-    top_k: 500
+    top_k: 128
     max_tokens: 4096
     memory_window: 10
-    max_top_k: 500
-  Claude 3 Haiku:
-    model_id: "anthropic.claude-3-haiku-20240307-v1:0"
+    max_top_k: 128
+  Amazon Nova Lite:
+    model_id: "us.amazon.nova-lite-v1:0"
     input_format: "text"
     temperature: 1.0
     top_p: 1.0
-    top_k: 500
+    top_k: 128
     max_tokens: 4096
     memory_window: 10
-    max_top_k: 500
-  Claude 3 Opus:
-    model_id: "anthropic.claude-3-opus-20240229-v1:0"
+    max_top_k: 128
+  Amazon Nova Micro:
+    model_id: "us.amazon.nova-micro-v1:0"
     input_format: "text"
     temperature: 1.0
     top_p: 1.0
-    top_k: 200
+    top_k: 128
     max_tokens: 4096
     memory_window: 10
-    max_top_k: 200
+    max_top_k: 128
   Mistral Large 2:
     model_id: "mistral.mistral-large-2407-v1:0"
     input_format: "text"
