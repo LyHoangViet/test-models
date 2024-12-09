@@ -1,7 +1,7 @@
 models:
   Claude 3.5 Sonnet v2:
     model_id: "anthropic.claude-3-5-sonnet-20241022-v2:0"
-    input_format: "text"
+    input_format: "multimodal"
     temperature: 1.0
     top_p: 1.0
     top_k: 500
@@ -10,7 +10,7 @@ models:
     max_top_k: 500
   Claude 3.5 Haiku:
     model_id: "anthropic.claude-3-5-haiku-20241022-v1:0"
-    input_format: "text"
+    input_format: "multimodal"
     temperature: 1.0
     top_p: 1.0
     top_k: 500
@@ -19,7 +19,7 @@ models:
     max_top_k: 500
   Amazon Nova Pro:
     model_id: "us.amazon.nova-pro-v1:0"
-    input_format: "text"
+    input_format: "multimodal"
     temperature: 1.0
     top_p: 1.0
     top_k: 128
@@ -28,7 +28,7 @@ models:
     max_top_k: 128
   Amazon Nova Lite:
     model_id: "us.amazon.nova-lite-v1:0"
-    input_format: "text"
+    input_format: "multimodal"
     temperature: 1.0
     top_p: 1.0
     top_k: 128
