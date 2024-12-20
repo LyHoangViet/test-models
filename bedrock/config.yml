@@ -5,7 +5,7 @@ models:
     temperature: 1.0
     top_p: 1.0
     top_k: 500
-    max_tokens: 4096
+    max_tokens: 8192
     memory_window: 10
     max_top_k: 500
   Claude 3.5 Haiku:
@@ -23,7 +23,7 @@ models:
     temperature: 1.0
     top_p: 1.0
     top_k: 128
-    max_tokens: 4096
+    max_tokens: 5000
     memory_window: 10
     max_top_k: 128
   Amazon Nova Lite:
@@ -32,7 +32,7 @@ models:
     temperature: 1.0
     top_p: 1.0
     top_k: 128
-    max_tokens: 4096
+    max_tokens: 5000
     memory_window: 10
     max_top_k: 128
   Amazon Nova Micro:
@@ -41,7 +41,7 @@ models:
     temperature: 1.0
     top_p: 1.0
     top_k: 128
-    max_tokens: 4096
+    max_tokens: 5000
     memory_window: 10
     max_top_k: 128
   Mistral Large 2:
