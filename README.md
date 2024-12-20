@@ -6,7 +6,7 @@ streamlit run bedrock/bedrock_chatbot.py
 ```
 
 Demo:
-<img width="1910" alt="image" src="https://github.com/user-attachments/assets/11120641-a776-4c06-a3b6-c5df75543214">
+<img width="1902" alt="image" src="https://github.com/user-attachments/assets/9cad1ea5-9acc-4ef4-af7a-e3df9e2ce025" />
 
 > Note: if you're going to use web search function, add your SERPAPI key and AWS region to bedrock/.env file~
 
