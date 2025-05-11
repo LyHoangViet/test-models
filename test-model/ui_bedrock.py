@@ -10,7 +10,6 @@ client = boto3.client(
 
 # Available models
 AVAILABLE_MODELS = {
-    "Claude 3.7 Sonnet": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
     "Nova Premier": "us.amazon.nova-premier-v1:0",
     "Nova Pro": "us.amazon.nova-pro-v1:0"
 
@@ -66,12 +65,15 @@ def main():
             index=0
         )
         model_id = AVAILABLE_MODELS[selected_model_name]
+
+        system_prompt = st.text_area("System Prompt", value="Bạn là một chuyên gia phân tích", height=100)
         
         st.subheader("Model Parameters")
         max_tokens = st.slider("Max Tokens", 1, 10000, 1000)
         top_p = st.slider("Top P", 0.0, 1.0, 0.1)
         top_k = st.slider("Top K", 1, 100, 20)
         temperature = st.slider("Temperature", 0.0, 1.0, 0.3)
+        
         
         model_params = {
             "maxTokens": max_tokens,
@@ -80,9 +82,6 @@ def main():
             "temperature": temperature
         }
     
-    # Main content area
-    st.header("Input Configuration")
-    
     # Input type selection
     input_type = st.radio("Select Input Type", ["image", "video"])
     
@@ -90,8 +89,7 @@ def main():
     s3_uri = st.text_input("S3 URI", value="s3://test-content-vinamilk/image/vinamilk-1.jpg")
     bucket_owner = st.text_input("Bucket Owner", value="637423316258")
     
-    # Prompts
-    system_prompt = st.text_area("System Prompt", value="Bạn là một chuyên gia phân tích")
+    # User prompt
     user_prompt = st.text_area("User Prompt", value="Provide titles for this image.")
     
     if st.button("Generate Response"):

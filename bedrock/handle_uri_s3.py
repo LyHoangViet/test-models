@@ -25,7 +25,7 @@ message_list = [
                     "source": {
                         "s3Location": {
                             "uri": "s3://test-content-vinamilk/video/video-test.mp4", 
-                            "bucketOwner": "63742331****"
+                            "bucketOwner": "637423316258"
                         }
                     }
                 }
