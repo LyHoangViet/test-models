@@ -87,7 +87,7 @@ def main():
     
     # S3 configuration
     s3_uri = st.text_input("S3 URI", value="s3://test-content-vinamilk/image/vinamilk-1.jpg")
-    bucket_owner = st.text_input("Bucket Owner", value="637423316258")
+    bucket_owner = st.text_input("Bucket Owner", value="6374233*****")
     
     # User prompt
     user_prompt = st.text_area("User Prompt", value="Provide titles for this image.")
