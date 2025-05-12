@@ -70,9 +70,9 @@ def main():
         
         st.subheader("Model Parameters")
         max_tokens = st.slider("Max Tokens", 1, 10000, 1000)
-        top_p = st.slider("Top P", 0.0, 1.0, 0.1)
-        top_k = st.slider("Top K", 1, 100, 20)
-        temperature = st.slider("Temperature", 0.0, 1.0, 0.3)
+        top_p = st.slider("Top P", 0.0, 1.0, 0.3)
+        top_k = st.slider("Top K", 1, 100, 50)
+        temperature = st.slider("Temperature", 0.0, 1.0, 0.1)
         
         
         model_params = {
@@ -86,11 +86,11 @@ def main():
     input_type = st.radio("Select Input Type", ["image", "video"])
     
     # S3 configuration
-    s3_uri = st.text_input("S3 URI", value="s3://test-content-vinamilk/image/vinamilk-1.jpg")
-    bucket_owner = st.text_input("Bucket Owner", value="6374233*****")
+    s3_uri = st.text_input("S3 URI", value="s3://test-models-vnm/video/video-test2.mp4")
+    bucket_owner = st.text_input("Bucket Owner", value="536697245***")
     
     # User prompt
-    user_prompt = st.text_area("User Prompt", value="Provide titles for this image.")
+    user_prompt = st.text_area("User Prompt", value="Đây là video tôi đã cung cấp, hãy phân tích nó.")
     
     if st.button("Generate Response"):
         try:
@@ -127,12 +127,12 @@ def main():
         except Exception as e:
             st.error(f"Error: {str(e)}")
     
-    # Display chat history
-    if st.session_state.messages:
-        st.header("Chat History")
-        for message in st.session_state.messages:
-            with st.chat_message(message["role"]):
-                st.write(message["content"])
+    # # Display chat history
+    # if st.session_state.messages:
+    #     st.header("Chat History")
+    #     for message in st.session_state.messages:
+    #         with st.chat_message(message["role"]):
+    #             st.write(message["content"])
 
 if __name__ == "__main__":
     main()

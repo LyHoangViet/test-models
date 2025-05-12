@@ -2,7 +2,7 @@
 A simple and clear example for implement a chatbot with Bedrock + LangChain + Streamlit. Know-how and build whatever you want. Just install and run the code~ 🚀
 ```
 pip install -r requirements.txt
-streamlit run bedrock/bedrock_chatbot.py
+streamlit run .\test-model\ui_bedrock.py
 ```
 
 Demo:
